@@ -5,8 +5,8 @@ const Child = (props) => {
         <div className="child">
             <h2>Child Component</h2>
             <button onClick={props.buttonClick}>Show Modal</button>
-            {/* Do not remove the main div */
-            props.showModal ? <Modal /> : null
+            {
+                props.showModal ? <Modal /> : null
             }
 
         </div>
