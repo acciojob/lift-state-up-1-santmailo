@@ -1,7 +1,41 @@
-
 import React from "react";
 import './../styles/App.css';
-import Parent from "parent";
+
+const Parent  = () => {
+  const [showModal, setShowModal] = React.useState(false);
+
+  const showModalHandler = () => {
+    setShowModal(!showModal);
+  };
+
+  return (
+    <div className="parent">
+      <h1>Parent Component</h1>
+      <Child showModal={showModal} eventHandler={showModalHandler} />
+    </div>
+  )
+}
+
+
+const Child = ({showModal,eventHandler}) => {
+  return (
+    <div className="child">
+      <h1>Child Component</h1>
+      <button onClick={eventHandler}>show Modal</button>
+      {showModal && <Modal /> }
+    </div>
+  )
+}
+
+const Modal= ()=> {
+  return (
+    <div className="modal">
+      <h1>Modal Content</h1>
+      <p>this is modal content</p>
+    </div>
+  )
+}
+
 
 const App = () => { 
   return (
