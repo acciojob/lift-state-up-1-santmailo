@@ -5,7 +5,7 @@ const Parent  = () => {
   const [showModal, setShowModal] = React.useState(false);
 
   const showModalHandler = () => {
-    setShowModal(!showModal);
+    setShowModal(true);
   };
 
   return (
@@ -22,7 +22,7 @@ const Child = ({showModal,eventHandler}) => {
     <div className="child">
       <h1>Child Component</h1>
       <button onClick={eventHandler}>show Modal</button>
-      {showModal && <Modal /> }
+      {showModal ? <Modal /> : null}
     </div>
   )
 }
