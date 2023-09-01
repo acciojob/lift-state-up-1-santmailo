@@ -30,7 +30,7 @@ const Child = ({showModal,eventHandler}) => {
 const Modal= ()=> {
   return (
     <div className="modal">
-      <h1>Modal Content</h1>
+      <h3>Modal Content</h3>
       <p>this is modal content</p>
     </div>
   )
